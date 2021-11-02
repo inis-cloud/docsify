@@ -11,8 +11,12 @@
 <!--- 前后端分离博客系统-->
 <!--- 后期会有众多的主题-->
 
-> 系统目前内置了 60 个API接口
+> 系统目前内置了 63 个API接口
 
 [展示](https://inis.cn)
 [安装](/start/install-inis-system)
 [API文档](/api/)
+
+<!-- 背景图片 -->
+
+<!--![](https://api.inis.cn/api/file/random)-->

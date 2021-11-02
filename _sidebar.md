@@ -9,6 +9,7 @@
 
 * [后端 - inis system](start/install-inis-system)
 * [前端 - inis theme](start/install-inis-theme)
+* [小程序和APP - inis app](start/install-inis-app)
 
 <a href="/#/api/" class="ml-3 sidebar-title">API文档</a>
 
@@ -36,3 +37,4 @@
 * [inis赞助](other/support)
 * [开发日志](other/log)
 * [问题反馈](other/feedback)
+* [版权声明](other/copy)

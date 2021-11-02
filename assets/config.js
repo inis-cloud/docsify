@@ -2,6 +2,7 @@ window.$docsify = {
     repo: 'https://github.com/inis-cloud',
     coverpage: true,		// 封面
     loadSidebar: true,		// 侧边栏
+    loadNavbar: true,       // 导航栏
     subMaxLevel: 3,			// 副标题等级
     auto2top: false,		// 自动跳转到页面顶部
 	

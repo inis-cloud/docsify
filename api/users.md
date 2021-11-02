@@ -446,6 +446,7 @@ echo $output;
 | level | 否 | string | user | 权限 | admin表示管理员，user表示用户 |
 | address_url | 否 | string | null | 用户网址 | 无 |
 | remarks | 否 | string | null | 备注 | 无 |
+| longtext | 否 | longtext | null | 自定义字段 | 无格式要求 |
 | code | 否 | string | null | 验证码 | 仅在需要修改个人邮箱需要提交，系统会自动往修改的邮箱发送验证码 |
 
 

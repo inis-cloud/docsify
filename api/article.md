@@ -31,8 +31,8 @@
 | order | font_count | 根据文章字数排序 |
 | order | create_time | 根据创建时间排序 |
 | order | update_time | 根据更新时间排序 |
-| model | md | Markdown文本 |
-| model | html | HTML文本 |
+| mode | md | Markdown文本 |
+| mode | html | HTML文本 |
 
 </details>
 
@@ -180,8 +180,8 @@ echo $data;
 
 | 参数名称 | 可选值 | 说明 |
 | :---- | :---- | :---- |
-| model | md | Markdown文本 |
-| model | html | HTML文本 |
+| mode | md | Markdown文本 |
+| mode | html | HTML文本 |
 
 </details>
 
@@ -541,6 +541,7 @@ echo $data;
 | tag_name | 否 | string、array | null | 新增标签名称 | 无 |
 | is_show | 否 | int | 1 | 是否显示 | 无 |
 | is_top | 否 | int | 0 | 是否置顶 | 无 |
+| opt | 否 | object | 无 | null | JSON字段，必须为对象结构 | 用于不同场景的拓展字段 |
 
 
 <!-- tabs:start -->
