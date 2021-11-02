@@ -1,21 +1,18 @@
-<!-- <div class="container"><div class="card-wrap"> -->
-
 # INIS
 
 > 如少年般，迎风而立
 
-[在线预览 Preview](http://inis.cn) | [使用文档](api/)
-
+[在线预览 Preview](https://inis.cn) | [使用文档](https://docs.inis.cc)
 
 <!-- tabs:start -->
 
 #### ** 前端 **
 
-![图片](../assets/img/index/1-1.png)
+![图片](https://docs.inis.cc/assets/img/index/1-1.png)
 
 #### ** 后端 **
 
-![图片](../assets/img/api/1-1.png)
+![图片](https://docs.inis.cc/assets/img/api/1-1.png)
 
 <!-- tabs:end -->
 
