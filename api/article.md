@@ -1,4 +1,4 @@
-### 获取【全部】文章数据
+## 获取【全部】文章数据
 
 > 通过该接口，你可以获取到全部的文章数据
 
@@ -13,7 +13,7 @@
 | order | 否 | string | <span class="violet">create_time desc</span> | 排序方式 |
 | mode | 否 | string | <span class="violet">html</span> | 文章渲染模式 |
 | search | 否 | string | null | 文章标题或内容搜索 |
-| login-token | 否 | string | 无 | [登录密钥] 用于判断是否拥有显示隐藏文章的权限 |
+| login-token | 否 | string | 无 | [登录密钥] 用于判断是否拥有显示隐藏文章的权限（可以在参数或headers中提交，推荐header提交） |
 | cache | 否 | bool | true | 是否获取缓存数据 |
 
 <br>
@@ -46,7 +46,7 @@
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/article',
+  url:'http://test.inis.cn/api/article',
   type:'GET',
   dataType:'JSON',
   success: (res) => {
@@ -68,7 +68,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/article').then((res) => {
+axios.get('http://test.inis.cn/api/article').then((res) => {
   // 状态码 200 表示请求成功
   if(res.data.code == 200){
 	console.log(res.data)
@@ -86,7 +86,7 @@ axios.get('http://api.inis.cc/api/article').then((res) => {
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/article';
+$url  = 'http://test.inis.cn/api/article';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -157,7 +157,7 @@ echo $data;
 
 
 
-### 获取【一篇】文章数据
+## 获取【一篇】文章数据
 
 > 通过该接口，你可以获取指定文章的详细数据
 
@@ -170,7 +170,7 @@ echo $data;
 | id | 否 | int | null | 文章ID |
 | mode | 否 | string | <span class="violet">html</span> | 文章渲染模式 |
 | password | 否 | string | null | 如果文章设置了密码可见，需要提交密码，才能看到内容 |
-| login-token | 否 | string | 无 | [登录密钥] 用于判断是否拥有显示隐藏文章的权限 |
+| login-token | 否 | string | 无 | [登录密钥] 用于判断是否拥有显示隐藏文章的权限（可以在参数或headers中提交，推荐header提交） |
 | cache | 否 | bool | true | 是否获取缓存数据 |
 
 <br>
@@ -195,7 +195,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/article',
+  url:'http://test.inis.cn/api/article',
   type:'GET',
   dataType:'JSON',
   data:{"id":1},
@@ -218,7 +218,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/article',{
+axios.get('http://test.inis.cn/api/article',{
     params:{ "id":1 }
   }).then(res=>{
     // 状态码 200 表示请求成功
@@ -238,7 +238,7 @@ axios.get('http://api.inis.cc/api/article',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/article?id=1';
+$url  = 'http://test.inis.cn/api/article?id=1';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -305,7 +305,7 @@ echo $data;
 
 
 
-### 【SQL】接口
+## 【SQL】接口
 
 > 通过该接口，你可以自己编写SQL语法获取更多自定义的数据
 
@@ -320,7 +320,7 @@ echo $data;
 | order | 否 | string | create_time desc | 排序方式 |
 | where | 否 | string | 无 | 条件查询 |
 | whereOr | 否 | string | 无 | 条件查询 |
-| login-token | 否 | string | 无 | [登录密钥] 用于判断是否拥有显示隐藏文章的权限 |
+| login-token | 否 | string | 无 | [登录密钥] 用于判断是否拥有显示隐藏文章的权限（可以在参数或headers中提交，推荐header提交） |
 | cache | 否 | bool | true | 是否获取缓存数据 |
 
 <br>
@@ -345,7 +345,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/article/sql',
+  url:'http://test.inis.cn/api/article/sql',
   type:'GET',
   dataType:'JSON',
   data:{
@@ -371,7 +371,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/article/sql',{
+axios.get('http://test.inis.cn/api/article/sql',{
     params:{
       "order"  : "id acs",
       "whereOr": "title,like,%inis系统%",    // 可以实现模糊搜索
@@ -394,7 +394,7 @@ axios.get('http://api.inis.cc/api/article/sql',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/article/sql?where=is_top=1;is_show=1;';
+$url  = 'http://test.inis.cn/api/article/sql?where=is_top=1;is_show=1;';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -516,7 +516,7 @@ echo $data;
 
 
 
-### 【新增或修改】文章
+## 【新增或修改】文章
 
 > 通过该接口，你可以新增或者修改文章数据   
 > 前提条件是必须登录且拥有权限的用户   
@@ -529,7 +529,7 @@ echo $data;
 
 | 参数名称 | 是否必选 | 参数类型 | 默认值 | 说明 | 备注 |
 | :---- | :---- | :---- | :---- | :---- | :---- |
-| login-token | 是 | string | 无 | 登录密钥 | 用于判断是否拥有权限 |
+| login-token | 是 | string | 无 | 登录密钥 | 用于判断是否拥有权限（可以在参数或headers中提交，推荐header提交） |
 | id | 否 | int | null | 文章ID | 存在则修改，反之新增 |
 | title | 否 | string | 未命名文章 | 文章标题 | 无 |
 | content | 否 | string | null | 文章内容 | 无 |
@@ -567,7 +567,7 @@ $('#btn-save').on('click', () => {
     let data = {'login-token':token, title, content, sort_id, tag_id, tag_name, is_top};
 
     $.ajax({
-          url:'http://api.inis.cc/api/article',
+          url:'http://test.inis.cn/api/article',
           type:'POST',
           data:data,
           dataType:'JSON',
@@ -590,7 +590,7 @@ $('#btn-save').on('click', () => {
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.post('http://api.inis.cc/api/article',{},{
+axios.post('http://test.inis.cn/api/article',{},{
 	headers: {
 		'Content-Type':'application/x-www-form-urlencoded'
 	},
@@ -633,7 +633,7 @@ $data = [
 ];
 
 // 提交接口
-$url = 'http://api.inis.cc/api/article';
+$url = 'http://test.inis.cn/api/article';
 
 $ch = curl_init();
 
@@ -679,7 +679,7 @@ echo $output;
 
 
 
-### 【删除】文章
+## 【删除】文章
 
 > 通过该接口，你可以删除一条或者多条文章数据   
 > 前提条件是必须登录且拥有权限的用户   
@@ -692,7 +692,7 @@ echo $output;
 
 | 参数名称 | 是否必选 | 参数类型 | 默认值 | 可选参数 | 说明 | 备注 |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
-| login-token | 是 | string | 无 | 无 | 登录密钥 | 用于判断是否拥有权限 |
+| login-token | 是 | string | 无 | 无 | 登录密钥 | 用于判断是否拥有权限（可以在参数或headers中提交，推荐header提交） |
 | mode | 是 | string | null | remove | 模式 | 无 |
 | id | 否 | string、array | null | 无 | 文章ID | 可以用 , 号隔开多个ID |
 | destroy | 否 | bool | false | true、false | 是否真删除 | false的情况下、被删除的文章会存放在回收站 |
@@ -717,7 +717,7 @@ $('#btn-save').on('click', () => {
     let data = {'login-token':token, mode, id};
 
     $.ajax({
-          url:'http://api.inis.cc/api/article',
+          url:'http://test.inis.cn/api/article',
           type:'POST',
           data:data,
           dataType:'JSON',
@@ -740,7 +740,7 @@ $('#btn-save').on('click', () => {
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.post('http://api.inis.cc/api/article',{},{
+axios.post('http://test.inis.cn/api/article',{},{
 	headers: {
 		'Content-Type':'application/x-www-form-urlencoded'
 	},
@@ -775,7 +775,7 @@ $data = [
 ];
 
 // 提交接口
-$url = 'http://api.inis.cc/api/article';
+$url = 'http://test.inis.cn/api/article';
 
 $ch = curl_init();
 

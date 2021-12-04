@@ -1,4 +1,4 @@
-### 验证码【生成】
+## 验证码【生成】
 
 > 通过该接口，你可以创建一个验证码   
 > PS：创建的验证码结果，会发送到对应的邮箱中，发送成功的前提是有在后台配置邮箱信息，并且信息正确
@@ -31,7 +31,7 @@ $('#btn-save').on('click', () => {
     let data = {mode,email};
 
     $.ajax({
-          url:'http://api.inis.cc/api/verify-code',
+          url:'http://test.inis.cn/api/verify-code',
           type:'POST',
           data:data,
           dataType:'JSON',
@@ -54,7 +54,7 @@ $('#btn-save').on('click', () => {
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.post('http://api.inis.cc/api/verify-code',{},{
+axios.post('http://test.inis.cn/api/verify-code',{},{
 	headers: {
 		'Content-Type':'application/x-www-form-urlencoded'
 	},
@@ -87,7 +87,7 @@ $data = [
 ];
 
 // 提交评论接口
-$url = 'http://api.inis.cc/api/verify-code';
+$url = 'http://test.inis.cn/api/verify-code';
 
 $ch = curl_init();
 
@@ -134,7 +134,7 @@ echo $output;
 
 
 
-### 验证码【校验】
+## 验证码【校验】
 
 > 通过该接口，你可以创建一个验证码   
 > PS：验证码一旦校验成功，系统将会自动删除数据库中的验证码记录，这意味着，单个验证码只能使用一次
@@ -169,7 +169,7 @@ $('#btn-save').on('click', () => {
     let data = {mode,email,code};
 
     $.ajax({
-          url:'http://api.inis.cc/api/verify-code',
+          url:'http://test.inis.cn/api/verify-code',
           type:'POST',
           data:data,
           dataType:'JSON',
@@ -192,7 +192,7 @@ $('#btn-save').on('click', () => {
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.post('http://api.inis.cc/api/verify-code',{},{
+axios.post('http://test.inis.cn/api/verify-code',{},{
 	headers: {
 		'Content-Type':'application/x-www-form-urlencoded'
 	},
@@ -227,7 +227,7 @@ $data = [
 ];
 
 // 提交评论接口
-$url = 'http://api.inis.cc/api/verify-code';
+$url = 'http://test.inis.cn/api/verify-code';
 
 $ch = curl_init();
 

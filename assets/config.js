@@ -1,9 +1,15 @@
+// 离线模式
+if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+}
+
+// 文档配置
 window.$docsify = {
     repo: 'https://github.com/inis-cloud',
     coverpage: true,		// 封面
     loadSidebar: true,		// 侧边栏
     loadNavbar: true,       // 导航栏
-    subMaxLevel: 3,			// 副标题等级
+    subMaxLevel: 4,			// 副标题等级
     auto2top: false,		// 自动跳转到页面顶部
 	
 	/* tab 选择卡 */

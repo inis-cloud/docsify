@@ -1,4 +1,4 @@
-### 获取【全部】评论数据
+## 获取【全部】评论数据
 
 > 通过该接口，你可以获取到全部的评论数据
 
@@ -24,7 +24,7 @@
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/comments',
+  url:'http://test.inis.cn/api/comments',
   type:'GET',
   dataType:'JSON',
   success: (res) => {
@@ -46,7 +46,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/comments').then((res) => {
+axios.get('http://test.inis.cn/api/comments').then((res) => {
   // 状态码 200 表示请求成功
   if(res.data.code == 200){
 	console.log(res.data)
@@ -64,7 +64,7 @@ axios.get('http://api.inis.cc/api/comments').then((res) => {
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/comments';
+$url  = 'http://test.inis.cn/api/comments';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -141,7 +141,7 @@ echo $data;
 
 
 
-### 获取【单条】评论数据
+## 获取【单条】评论数据
 
 > 通过该接口，你可以获取到单条的评论数据
 
@@ -165,7 +165,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/comments',
+  url:'http://test.inis.cn/api/comments',
   type:'GET',
   dataType:'JSON',
   data: {"id":1},
@@ -188,7 +188,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/comments',{
+axios.get('http://test.inis.cn/api/comments',{
     params:{ "id":1 }
   }).then((res) => {
   // 状态码 200 表示请求成功
@@ -208,7 +208,7 @@ axios.get('http://api.inis.cc/api/comments',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/comments?id=1';
+$url  = 'http://test.inis.cn/api/comments?id=1';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -452,7 +452,7 @@ echo $data;
 
 
 
-### 获取【文章下】的评论数据
+## 获取【文章下】的评论数据
 
 > 通过该接口，你可以获取到全部的评论数据
 
@@ -479,7 +479,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/comments',
+  url:'http://test.inis.cn/api/comments',
   type:'GET',
   dataType:'JSON',
   data: {"article_id":1},
@@ -502,7 +502,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/comments',{
+axios.get('http://test.inis.cn/api/comments',{
     params:{ "article_id":1 }
   }).then((res) => {
     // 状态码 200 表示请求成功
@@ -522,7 +522,7 @@ axios.get('http://api.inis.cc/api/comments',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/comments?article_id=1';
+$url  = 'http://test.inis.cn/api/comments?article_id=1';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -877,7 +877,7 @@ echo $data;
 
 
 
-### 获取【聚合】评论数据
+## 获取【聚合】评论数据
 
 > 通过该接口，你可以获取到根据评论者邮箱聚合的评论   
 > mode=group：可用于统计评论者在本站的评论次数或用于实现总评论排行榜   
@@ -907,7 +907,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/comments',
+  url:'http://test.inis.cn/api/comments',
   type:'GET',
   dataType:'JSON',
   data: {"mode":"group"},
@@ -930,7 +930,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/comments',{
+axios.get('http://test.inis.cn/api/comments',{
     params:{ "mode":"group" }
   }).then((res) => {
     // 状态码 200 表示请求成功
@@ -950,7 +950,7 @@ axios.get('http://api.inis.cc/api/comments',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/comments?mode=group';
+$url  = 'http://test.inis.cn/api/comments?mode=group';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -1073,7 +1073,7 @@ echo $data;
 
 
 
-### 【新增】评论
+## 【新增】评论
 
 > 通过该接口，你可以获取到全部的评论数据
 
@@ -1083,7 +1083,7 @@ echo $data;
 
 | 参数名称 | 是否必选 | 参数类型 | 默认值 | 说明 | 备注 |
 | :---- | :---- | :---- | :---- | :---- | :---- |
-| login-token | 否 | string | 无 | 登录密钥 | 用于判断是否登录后提交的评论，优先级最高 |
+| login-token | 否 | string | 无 | 登录密钥 | 用于判断是否登录后提交的评论，优先级最高（可以在参数或headers中提交，推荐header提交） |
 | pid | 否 | int | 0 | 评论的父级ID | 用于判断是否为回复 |
 | content | 否 | string | 无 | 评论的内容 | 无 |
 | nickname | 否 | string | 无 | 用户昵称 | 如果提交了login-token，该字段会自动获取 |
@@ -1134,7 +1134,7 @@ $('#btn-save').on('click', () => {
     let data = {article_id,content,nickname,email,pid,url};
 
     $.ajax({
-          url:'http://api.inis.cc/api/comments',
+          url:'http://test.inis.cn/api/comments',
           type:'POST',
           data:data,
           dataType:'JSON',
@@ -1157,7 +1157,7 @@ $('#btn-save').on('click', () => {
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.post('http://api.inis.cc/api/comments',{},{
+axios.post('http://test.inis.cn/api/comments',{},{
 	headers: {
 		'Content-Type':'application/x-www-form-urlencoded'
 	},
@@ -1197,7 +1197,7 @@ $data = [
 ];
 
 // 提交评论接口
-$url = 'http://api.inis.cc/api/comments';
+$url = 'http://test.inis.cn/api/comments';
 
 $ch = curl_init();
 
@@ -1242,7 +1242,7 @@ echo $output;
 
 
 
-### 【SQL】接口
+## 【SQL】接口
 
 > 通过该接口，你可以自己编写SQL语法获取更多自定义的数据
 
@@ -1281,7 +1281,7 @@ echo $output;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/comments/sql',
+  url:'http://test.inis.cn/api/comments/sql',
   type:'GET',
   dataType:'JSON',
   data:{
@@ -1306,7 +1306,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/comments/sql',{
+axios.get('http://test.inis.cn/api/comments/sql',{
     params:{
       "order"  : "id acs",
       "whereOr": "nickname,like,%兔子%",    // 可以实现模糊搜索
@@ -1329,7 +1329,7 @@ axios.get('http://api.inis.cc/api/comments/sql',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/comments/sql?where=article_id=1';
+$url  = 'http://test.inis.cn/api/comments/sql?where=article_id=1';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -1440,7 +1440,7 @@ echo $data;
 
 
 
-### 【修改】评论
+## 【修改】评论
 
 > 通过该接口，你可以新增或者修改配置数据   
 > 前提条件是必须登录且拥有权限的用户   
@@ -1452,7 +1452,7 @@ echo $data;
 
 | 参数名称 | 是否必选 | 参数类型 | 默认值 | 可选值 | 说明 | 备注 |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
-| login-token | 是 | string | 无 | null | 登录密钥 | 用于判断是否拥有权限 |
+| login-token | 是 | string | 无 | null | 登录密钥 | 用于判断是否拥有权限（可以在参数或headers中提交，推荐header提交） |
 | mode | 是 | string | null | edit | 模式 | edit为修改 |
 | id | 是 | int | null | null | 评论ID | 无 |
 | content | 否 | string | null | null | 评论内容 | 无 |
@@ -1482,7 +1482,7 @@ $('#btn-save').on('click', () => {
     let data = {'login-token':token, id, mode, content};
 
     $.ajax({
-          url:'http://api.inis.cc/api/comments',
+          url:'http://test.inis.cn/api/comments',
           type:'POST',
           data:data,
           dataType:'JSON',
@@ -1505,7 +1505,7 @@ $('#btn-save').on('click', () => {
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.post('http://api.inis.cc/api/comments',{},{
+axios.post('http://test.inis.cn/api/comments',{},{
 	headers: {
 		'Content-Type':'application/x-www-form-urlencoded'
 	},
@@ -1542,7 +1542,7 @@ $data = [
 ];
 
 // 提交接口
-$url = 'http://api.inis.cc/api/comments';
+$url = 'http://test.inis.cn/api/comments';
 
 $ch = curl_init();
 
@@ -1587,7 +1587,7 @@ echo $output;
 
 
 
-### 【删除】评论
+## 【删除】评论
 
 > 通过该接口，你可以删除一条或者多条文章数据   
 > 前提条件是必须登录且拥有权限的用户   
@@ -1599,7 +1599,7 @@ echo $output;
 
 | 参数名称 | 是否必选 | 参数类型 | 默认值 | 可选参数 | 说明 | 备注 |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
-| login-token | 是 | string | 无 | 无 | 登录密钥 | 用于判断是否拥有权限 |
+| login-token | 是 | string | 无 | 无 | 登录密钥 | 用于判断是否拥有权限（可以在参数或headers中提交，推荐header提交） |
 | mode | 是 | string | null | remove | 模式 | 无 |
 | id | 否 | int、string | null | 无 | 评论ID | 支持批量，用 , 号隔开多个ID |
 
@@ -1623,7 +1623,7 @@ $('#btn-save').on('click', () => {
     let data = {'login-token':token, mode, id};
 
     $.ajax({
-          url:'http://api.inis.cc/api/comments',
+          url:'http://test.inis.cn/api/comments',
           type:'POST',
           data:data,
           dataType:'JSON',
@@ -1646,7 +1646,7 @@ $('#btn-save').on('click', () => {
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.post('http://api.inis.cc/api/comments',{},{
+axios.post('http://test.inis.cn/api/comments',{},{
 	headers: {
 		'Content-Type':'application/x-www-form-urlencoded'
 	},
@@ -1681,7 +1681,7 @@ $data = [
 ];
 
 // 提交接口
-$url = 'http://api.inis.cc/api/comments';
+$url = 'http://test.inis.cn/api/comments';
 
 $ch = curl_init();
 

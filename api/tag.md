@@ -1,4 +1,4 @@
-### 获取【全部】标签数据
+## 获取【全部】标签数据
 
 > 通过该接口，你可以获取到全部的标签数据
 
@@ -23,7 +23,7 @@
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/tag',
+  url:'http://test.inis.cn/api/tag',
   type:'GET',
   dataType:'JSON',
   success: (res) => {
@@ -45,7 +45,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/tag').then((res) => {
+axios.get('http://test.inis.cn/api/tag').then((res) => {
   // 状态码 200 表示请求成功
   if(res.data.code == 200){
 	console.log(res.data)
@@ -63,7 +63,7 @@ axios.get('http://api.inis.cc/api/tag').then((res) => {
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/tag';
+$url  = 'http://test.inis.cn/api/tag';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -110,7 +110,9 @@ echo $data;
 </details>
 
 
-### 获取【标签下】的文章数据
+
+
+## 获取【标签下】的文章数据
 
 > 通过该接口，你可以获取指定标签下的文章数据
 
@@ -136,7 +138,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/tag',
+  url:'http://test.inis.cn/api/tag',
   type:'GET',
   dataType:'JSON',
   data: {"id":89},
@@ -159,7 +161,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/tag',{
+axios.get('http://test.inis.cn/api/tag',{
     params:{ "id":89 }
   }).then((res) => {
     // 状态码 200 表示请求成功
@@ -179,7 +181,7 @@ axios.get('http://api.inis.cc/api/tag',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/tag?id=89';
+$url  = 'http://test.inis.cn/api/tag?id=89';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -272,8 +274,7 @@ echo $data;
 
 
 
-
-### 【SQL】接口
+## 【SQL】接口
 
 > 通过该接口，你可以自己编写SQL语法获取更多自定义的数据
 
@@ -312,7 +313,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/tag/sql',
+  url:'http://test.inis.cn/api/tag/sql',
   type:'GET',
   dataType:'JSON',
   data:{
@@ -338,7 +339,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/tag/sql',{
+axios.get('http://test.inis.cn/api/tag/sql',{
     params:{
       "order"  : "id acs",
       "whereOr": "name,like,%标签%",    // 可以实现模糊搜索
@@ -361,7 +362,7 @@ axios.get('http://api.inis.cc/api/tag/sql',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/tag/sql?where=id=102;is_show=1;';
+$url  = 'http://test.inis.cn/api/tag/sql?where=id=102;is_show=1;';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -409,7 +410,7 @@ echo $data;
 
 
 
-### 【新增或修改】标签
+## 【新增或修改】标签
 
 > 通过该接口，你可以新增或者修改标签数据   
 > 前提条件是必须登录且拥有权限的用户   
@@ -421,7 +422,7 @@ echo $data;
 
 | 参数名称 | 是否必选 | 参数类型 | 默认值 | 说明 | 备注 |
 | :---- | :---- | :---- | :---- | :---- | :---- |
-| login-token | 是 | string | 无 | 登录密钥 | 用于判断是否拥有权限 |
+| login-token | 是 | string | 无 | 登录密钥 | 用于判断是否拥有权限（可以在参数或headers中提交，推荐header提交） |
 | id | 否 | int | null | 标签ID | 存在则修改，反之新增 |
 | named | 否 | string | null | 该字段等于name字段 | 由于TP6会抢占name参数，所以用named代替name |
 | is_show | 否 | string | 1 | 是否显示 | 0表示不显示 |
@@ -446,7 +447,7 @@ $('#btn-save').on('click', () => {
     let data = {'login-token':token, named, opt};
 
     $.ajax({
-          url:'http://api.inis.cc/api/article',
+          url:'http://test.inis.cn/api/article',
           type:'POST',
           data:data,
           dataType:'JSON',
@@ -469,7 +470,7 @@ $('#btn-save').on('click', () => {
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.post('http://api.inis.cc/api/article',{},{
+axios.post('http://test.inis.cn/api/article',{},{
 	headers: {
 		'Content-Type':'application/x-www-form-urlencoded'
 	},
@@ -504,7 +505,7 @@ $data = [
 ];
 
 // 提交接口
-$url = 'http://api.inis.cc/api/article';
+$url = 'http://test.inis.cn/api/article';
 
 $ch = curl_init();
 
@@ -549,8 +550,7 @@ echo $output;
 
 
 
-
-### 【删除】标签
+## 【删除】标签
 
 > 通过该接口，你可以删除一条或者多条标签数据   
 > 前提条件是必须登录且拥有权限的用户   
@@ -562,7 +562,7 @@ echo $output;
 
 | 参数名称 | 是否必选 | 参数类型 | 默认值 | 可选参数 | 说明 | 备注 |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
-| login-token | 是 | string | 无 | 无 | 登录密钥 | 用于判断是否拥有权限 |
+| login-token | 是 | string | 无 | 无 | 登录密钥 | 用于判断是否拥有权限（可以在参数或headers中提交，推荐header提交） |
 | mode | 是 | string | null | remove | 模式 | 无 |
 | id | 否 | string、array | null | 无 | 标签ID | 可以用 , 号隔开多个ID |
 
@@ -586,7 +586,7 @@ $('#btn-save').on('click', () => {
     let data = {'login-token':token, mode, id};
 
     $.ajax({
-          url:'http://api.inis.cc/api/tag',
+          url:'http://test.inis.cn/api/tag',
           type:'POST',
           data:data,
           dataType:'JSON',
@@ -609,7 +609,7 @@ $('#btn-save').on('click', () => {
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.post('http://api.inis.cc/api/tag',{},{
+axios.post('http://test.inis.cn/api/tag',{},{
 	headers: {
 		'Content-Type':'application/x-www-form-urlencoded'
 	},
@@ -644,7 +644,7 @@ $data = [
 ];
 
 // 提交接口
-$url = 'http://api.inis.cc/api/tag';
+$url = 'http://test.inis.cn/api/tag';
 
 $ch = curl_init();
 

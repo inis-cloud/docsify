@@ -1,4 +1,4 @@
-### 获取【歌单列表】
+## 获取【歌单列表】
 
 > 通过该接口，你可以获取到全部的歌单数据
 
@@ -23,7 +23,7 @@
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/music',
+  url:'http://test.inis.cn/api/music',
   type:'GET',
   dataType:'JSON',
   success: (res) => {
@@ -45,7 +45,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/music').then((res) => {
+axios.get('http://test.inis.cn/api/music').then((res) => {
   // 状态码 200 表示请求成功
   if(res.data.code == 200){
 	console.log(res.data)
@@ -63,7 +63,7 @@ axios.get('http://api.inis.cc/api/music').then((res) => {
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/music';
+$url  = 'http://test.inis.cn/api/music';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -123,7 +123,7 @@ echo $data;
 
 
 
-### 获取【单个歌单】数据
+## 获取【单个歌单】数据
 
 > 通过该接口，你可以获取歌单的信息，不包含歌单列表数据
 
@@ -146,7 +146,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/music',
+  url:'http://test.inis.cn/api/music',
   type:'GET',
   dataType:'JSON',
   data: {"id":1},
@@ -169,7 +169,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/music',{
+axios.get('http://test.inis.cn/api/music',{
     params:{ "id":1 }
   }).then(res=>{
     // 状态码 200 表示请求成功
@@ -189,7 +189,7 @@ axios.get('http://api.inis.cc/api/music',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/music?id=1';
+$url  = 'http://test.inis.cn/api/music?id=1';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -232,7 +232,7 @@ echo $data;
 
 
 
-### 获取【歌单内歌曲列表】
+## 获取【歌单内歌曲列表】
 
 > 通过该接口，你可以获取歌单下的全部音乐列表数据，不包含播放地址，播放地址在下一个接口获取
 
@@ -257,7 +257,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/music',
+  url:'http://test.inis.cn/api/music',
   type:'GET',
   dataType:'JSON',
   data: {"id":1,"mode":"list"},
@@ -280,7 +280,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/music',{
+axios.get('http://test.inis.cn/api/music',{
     params:{ "id":1,"mode":"list" }
   }).then(res=>{
     // 状态码 200 表示请求成功
@@ -300,7 +300,7 @@ axios.get('http://api.inis.cc/api/music',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/music?id=1&mode=list';
+$url  = 'http://test.inis.cn/api/music?id=1&mode=list';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -381,7 +381,7 @@ echo $data;
 
 
 
-### 获取歌曲【播放地址】数据
+## 获取歌曲【播放地址】数据
 
 > 通过该接口，你可以获取指定歌曲的播放地址以及其他数据
 
@@ -406,7 +406,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/music',
+  url:'http://test.inis.cn/api/music',
   type:'GET',
   dataType:'JSON',
   data: {"id":"004D4uji2ceY5H","mode":"song","who":"tencent"},
@@ -429,7 +429,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/music',{
+axios.get('http://test.inis.cn/api/music',{
     params:{ "id":"004D4uji2ceY5H","mode":"song","who":"tencent" }
   }).then(res=>{
     // 状态码 200 表示请求成功
@@ -449,7 +449,7 @@ axios.get('http://api.inis.cc/api/music',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/music?id=004D4uji2ceY5H&mode=song&who=tencent';
+$url  = 'http://test.inis.cn/api/music?id=004D4uji2ceY5H&mode=song&who=tencent';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 

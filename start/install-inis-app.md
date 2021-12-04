@@ -1,10 +1,10 @@
-### 简介
+## 简介
 
 !> `inis app`使用`uni-app`开发，遵循`uni-app`规范，`inis app`兼容了`QQ和微信平台小程序`，可以打包发布到`QQ和微信小程序平台`，也可以打包为`Android`和`IOS`的APP
 
 > 这里以`inis app`打包并发布到`QQ小程序`举例，以及如何打包为`Android`的APP
 
-### 1、注册QQ小程序平台帐号
+## 1、注册QQ小程序平台帐号
 
 !> 首先我们需要前往 [QQ小程序](https://q.qq.com/) (网址：https://q.qq.com) 注册一个帐号   
 
@@ -18,7 +18,7 @@
 
 ![开发者资质认证](../assets/img/start/3-2.png)
 
-### 2、下载inis app源码和工具
+## 2、下载inis app源码和工具
 
 !> 工具需要用到 `uni-app` 官方提供的 `HBuilderX` IDE编辑器（用于打包代码） 和 `QQ小程序开发者工具`（用于上传代码）
 
@@ -37,7 +37,7 @@
 
 !> 将 `HBuilderX` 和 `QQ小程序开发者工具` 或 `微信开发者工具` 进行安装
 
-### 3、打包源码为QQ小程序并发布
+## 3、打包源码为QQ小程序并发布
 
 !> 打开 `HBuilderX` 并导入 `inis app` 源码
 
@@ -64,11 +64,11 @@
 
 <video src="../assets/img/start/20211102_161849.mp4" controls>Not Support</video>
 
-### 总结
+## 总结
 
 !> 因为发布到微信小程序的教程网上随处可见，因此这里以少见的QQ小程序发布举例，其实不管是QQ还是微信小程序的发布，或是别的平台小程序发布，方法大同小异，这一套源码不仅支持`QQ和微信小程序`，其他小程序理论上也可以打包，具体有待各位去验证
 
-### 打包为Android或IOS的APP
+## 打包为Android或IOS的APP
 
 !> 接下来我们讲讲怎么使用这套源码打包为`Android`和`IOS`的APP
 

@@ -1,4 +1,4 @@
-### 获取【全部】公告数据
+## 获取【全部】公告数据
 
 > 通过该接口，你可以获取到全部的公告数据
 
@@ -23,7 +23,7 @@
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/placard',
+  url:'http://test.inis.cn/api/placard',
   type:'GET',
   dataType:'JSON',
   success: (res) => {
@@ -45,7 +45,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/placard').then((res) => {
+axios.get('http://test.inis.cn/api/placard').then((res) => {
   // 状态码 200 表示请求成功
   if(res.data.code == 200){
 	console.log(res.data)
@@ -63,7 +63,7 @@ axios.get('http://api.inis.cc/api/placard').then((res) => {
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/placard';
+$url  = 'http://test.inis.cn/api/placard';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -126,7 +126,7 @@ echo $data;
 
 
 
-### 获取【一条】公告数据
+## 获取【一条】公告数据
 
 > 通过该接口，你可以获取指定公告的详细数据
 
@@ -149,7 +149,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/placard',
+  url:'http://test.inis.cn/api/placard',
   type:'GET',
   dataType:'JSON',
   data: {"id":1},
@@ -172,7 +172,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/placard',{
+axios.get('http://test.inis.cn/api/placard',{
     params:{ "id":1 }
   }).then(res=>{
     // 状态码 200 表示请求成功
@@ -192,7 +192,7 @@ axios.get('http://api.inis.cc/api/placard',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/placard?id=1';
+$url  = 'http://test.inis.cn/api/placard?id=1';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -231,7 +231,7 @@ echo $data;
 
 
 
-### 【SQL】接口
+## 【SQL】接口
 
 > 通过该接口，你可以自己编写SQL语法获取更多自定义的数据
 
@@ -270,7 +270,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/placard/sql',
+  url:'http://test.inis.cn/api/placard/sql',
   type:'GET',
   dataType:'JSON',
   data:{
@@ -295,7 +295,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/placard/sql',{
+axios.get('http://test.inis.cn/api/placard/sql',{
     params:{
       "whereOr": "type,=,qq;type,=,web;",    // 可以实现获取QQ和网站的分类数据
     }
@@ -317,7 +317,7 @@ axios.get('http://api.inis.cc/api/placard/sql',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/placard/sql?whereOr=type,=,qq;type,=,web;';
+$url  = 'http://test.inis.cn/api/placard/sql?whereOr=type,=,qq;type,=,web;';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 

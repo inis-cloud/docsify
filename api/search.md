@@ -1,4 +1,4 @@
-### 【关键词】搜文章
+## 【关键词】搜文章
 
 > 通过该接口，你可以根据关键词搜索站内的文章
 
@@ -32,7 +32,7 @@ $('#btn-search').on('click', () => {
     let data = {value,sort_id};
 
     $.ajax({
-          url:'http://api.inis.cc/api/search',
+          url:'http://test.inis.cn/api/search',
           type:'GET',
           data:data,
           dataType:'JSON',
@@ -55,7 +55,7 @@ $('#btn-search').on('click', () => {
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/search',{
+axios.get('http://test.inis.cn/api/search',{
 	params: {
 		value    : 'inis',
 		sort_id  : 1,
@@ -78,7 +78,7 @@ axios.get('http://api.inis.cc/api/search',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/search?value=inis&sort_id=1';
+$url  = 'http://test.inis.cn/api/search?value=inis&sort_id=1';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 

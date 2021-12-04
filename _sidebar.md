@@ -11,7 +11,7 @@
 * [前端 - inis theme](start/install-inis-theme)
 * [小程序和APP - inis app](start/install-inis-app)
 
-<a href="/#/api/" class="ml-3 sidebar-title">API文档</a>
+<a href="/#/api/" class="ml-3 sidebar-title">API 文档</a>
 
 * [【文章】接口](api/article)
 * [【评论】接口](api/comments)
@@ -30,6 +30,10 @@
 * [【友链分类】接口](api/links-sort)
 * [【定位信息】接口](api/location)
 * [【其他杂项】接口](api/other)
+
+<a href="/#/tool/" class="ml-3 sidebar-title">工具</a>
+
+* [CDN](tool/cdn)
 
 <a href="/#/api/" class="ml-3 sidebar-title">其他说明</a>
 

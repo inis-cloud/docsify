@@ -1,4 +1,4 @@
-### 获取【用户】数据
+## 获取【用户】数据
 
 > 通过该接口，你可以获取到全部的用户数据   
 > 为了安全起见，该接口只返回非敏感数据，例如帐号、密码和邮箱等敏感数据已被屏蔽
@@ -26,7 +26,7 @@
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/users',
+  url:'http://test.inis.cn/api/users',
   type:'GET',
   dataType:'JSON',
   success: (res) => {
@@ -48,7 +48,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/users').then((res) => {
+axios.get('http://test.inis.cn/api/users').then((res) => {
   // 状态码 200 表示请求成功
   if(res.data.code == 200){
 	console.log(res.data)
@@ -66,7 +66,7 @@ axios.get('http://api.inis.cc/api/users').then((res) => {
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/users';
+$url  = 'http://test.inis.cn/api/users';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -133,7 +133,7 @@ echo $data;
 
 
 
-### 用户【登录】接口
+## 用户【登录】接口
 
 > 通过该接口，你可以开发用户登录接口   
 > 登录成功之后，会返回一个 login-token 的加密字段，请务必保管好该字段   
@@ -160,7 +160,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/users',
+  url:'http://test.inis.cn/api/users',
   type:'GET',
   dataType:'JSON',
   data: {"account":"admin","password":"123456"},
@@ -183,7 +183,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.post('http://api.inis.cc/api/users',{},{
+axios.post('http://test.inis.cn/api/users',{},{
     headers: {
         'Content-Type':'application/x-www-form-urlencoded'
     },
@@ -217,7 +217,7 @@ $data = [
 ];
 
 // 提交接口
-$url = 'http://api.inis.cc/api/users';
+$url = 'http://test.inis.cn/api/users';
 
 $ch = curl_init();
 
@@ -280,7 +280,7 @@ echo $output;
 
 
 
-### 用户【注册】接口
+## 用户【注册】接口
 
 > 通过该接口，你可以开发用户注册接口   
 > 注册成功后，系统会自动分配一个默认的随机头像   
@@ -308,7 +308,7 @@ echo $output;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/users',
+  url:'http://test.inis.cn/api/users',
   type:'POST',
   dataType:'JSON',
   data: {"mode":"register","nickname":"张三","email":"zhangsan@qq.com",'password':'zhangsan..','code':'DASD21'},
@@ -331,7 +331,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.post('http://api.inis.cc/api/users',{},{
+axios.post('http://test.inis.cn/api/users',{},{
     headers: {
         'Content-Type':'application/x-www-form-urlencoded'
     },
@@ -370,7 +370,7 @@ $data = [
 ];
 
 // 提交接口
-$url = 'http://api.inis.cc/api/users';
+$url = 'http://test.inis.cn/api/users';
 
 $ch = curl_init();
 
@@ -418,7 +418,7 @@ echo $output;
 
 
 
-### 【新增或修改】用户
+## 【新增或修改】用户
 
 > 通过该接口，你可以新增或者修改用户数据   
 > 前提条件是必须登录且拥有权限的用户   
@@ -432,7 +432,7 @@ echo $output;
 
 | 参数名称 | 是否必选 | 参数类型 | 默认值 | 说明 | 备注 |
 | :---- | :---- | :---- | :---- | :---- | :---- |
-| login-token | 是 | string | null | 登录密钥 | 用于判断是否拥有权限 |
+| login-token | 是 | string | null | 登录密钥 | 用于判断是否拥有权限（可以在参数或headers中提交，推荐header提交） |
 | id | 否 | int | null | ID | ID存在为修改，反则新增 |
 | account | 是 | string | null | 帐号 | 用于登录 |
 | password | 否 | string | null | 密码 | 新增必须 |
@@ -470,7 +470,7 @@ $('#btn-save').on('click', () => {
     let data = {'login-token':token, id, nickname, password};
 
     $.ajax({
-        url:'http://api.inis.cc/api/users',
+        url:'http://test.inis.cn/api/users',
         type:'POST',
         data:data,
         dataType:'JSON',
@@ -493,7 +493,7 @@ $('#btn-save').on('click', () => {
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.post('http://api.inis.cc/api/users',{},{
+axios.post('http://test.inis.cn/api/users',{},{
 	headers: {
 		'Content-Type':'application/x-www-form-urlencoded'
 	},
@@ -530,7 +530,7 @@ $data = [
 ];
 
 // 提交接口
-$url = 'http://api.inis.cc/api/users';
+$url = 'http://test.inis.cn/api/users';
 
 $ch = curl_init();
 
@@ -574,7 +574,7 @@ echo $output;
 
 
 
-### 【删除】用户
+## 【删除】用户
 
 > 通过该接口，你可以删除一条或者多条文章数据   
 > 前提条件是必须登录且拥有权限的用户   
@@ -586,7 +586,7 @@ echo $output;
 
 | 参数名称 | 是否必选 | 参数类型 | 默认值 | 可选参数 | 说明 | 备注 |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
-| login-token | 是 | string | 无 | 无 | 登录密钥 | 用于判断是否拥有权限 |
+| login-token | 是 | string | 无 | 无 | 登录密钥 | 用于判断是否拥有权限（可以在参数或headers中提交，推荐header提交） |
 | mode | 是 | string | null | remove | 模式 | 无 |
 | id | 否 | int、string | null | 无 | 友链ID | 支持批量，用 , 号隔开多个ID |
 
@@ -610,7 +610,7 @@ $('#btn-save').on('click', () => {
     let data = {'login-token':token, mode, id};
 
     $.ajax({
-          url:'http://api.inis.cc/api/users',
+          url:'http://test.inis.cn/api/users',
           type:'POST',
           data:data,
           dataType:'JSON',
@@ -633,7 +633,7 @@ $('#btn-save').on('click', () => {
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.post('http://api.inis.cc/api/users',{},{
+axios.post('http://test.inis.cn/api/users',{},{
 	headers: {
 		'Content-Type':'application/x-www-form-urlencoded'
 	},
@@ -668,7 +668,7 @@ $data = [
 ];
 
 // 提交接口
-$url = 'http://api.inis.cc/api/users';
+$url = 'http://test.inis.cn/api/users';
 
 $ch = curl_init();
 

@@ -1,4 +1,4 @@
-### 获取【全部】轮播数据
+## 获取【全部】轮播数据
 
 > 通过该接口，你可以获取到全部的轮播数据
 
@@ -23,7 +23,7 @@
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/banner',
+  url:'http://test.inis.cn/api/banner',
   type:'GET',
   dataType:'JSON',
   success: (res) => {
@@ -45,7 +45,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/banner').then((res) => {
+axios.get('http://test.inis.cn/api/banner').then((res) => {
   // 状态码 200 表示请求成功
   if(res.data.code == 200){
 	console.log(res.data)
@@ -63,7 +63,7 @@ axios.get('http://api.inis.cc/api/banner').then((res) => {
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/banner';
+$url  = 'http://test.inis.cn/api/banner';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -115,7 +115,7 @@ echo $data;
 
 
 
-### 获取【一条】轮播数据
+## 获取【一条】轮播数据
 
 > 通过该接口，你可以获取指定轮播的详细数据
 
@@ -138,7 +138,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/banner',
+  url:'http://test.inis.cn/api/banner',
   type:'GET',
   dataType:'JSON',
   data: {"id":1},
@@ -161,7 +161,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/banner',{
+axios.get('http://test.inis.cn/api/banner',{
     params:{ "id":1 }
   }).then(res=>{
     // 状态码 200 表示请求成功
@@ -181,7 +181,7 @@ axios.get('http://api.inis.cc/api/banner',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/banner?id=1';
+$url  = 'http://test.inis.cn/api/banner?id=1';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -220,7 +220,7 @@ echo $data;
 
 
 
-### 【SQL】接口
+## 【SQL】接口
 
 > 通过该接口，你可以自己编写SQL语法获取更多自定义的数据
 
@@ -259,7 +259,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/banner/sql',
+  url:'http://test.inis.cn/api/banner/sql',
   type:'GET',
   dataType:'JSON',
   data:{
@@ -285,7 +285,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/banner/sql',{
+axios.get('http://test.inis.cn/api/banner/sql',{
     params:{
       "order"  : "id acs",
       "whereOr": "title,like,%轮播一%",    // 可以实现模糊搜索
@@ -308,7 +308,7 @@ axios.get('http://api.inis.cc/api/banner/sql',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/banner/sql?where=id=1;url=//inis.cn;';
+$url  = 'http://test.inis.cn/api/banner/sql?where=id=1;url=//inis.cn;';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 

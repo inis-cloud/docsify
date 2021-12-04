@@ -1,4 +1,4 @@
-### 获取【全部】友链数据
+## 获取【全部】友链数据
 
 > 通过该接口，你可以获取到全部的友链数据
 
@@ -23,7 +23,7 @@
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/links',
+  url:'http://test.inis.cn/api/links',
   type:'GET',
   dataType:'JSON',
   success: (res) => {
@@ -45,7 +45,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/links').then((res) => {
+axios.get('http://test.inis.cn/api/links').then((res) => {
   // 状态码 200 表示请求成功
   if(res.data.code == 200){
 	console.log(res.data)
@@ -63,7 +63,7 @@ axios.get('http://api.inis.cc/api/links').then((res) => {
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/links';
+$url  = 'http://test.inis.cn/api/links';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -133,7 +133,7 @@ echo $data;
 
 
 
-### 获取【一条】友链数据
+## 获取【一条】友链数据
 
 > 通过该接口，你可以获取指定友链的详细数据
 
@@ -156,7 +156,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/links',
+  url:'http://test.inis.cn/api/links',
   type:'GET',
   dataType:'JSON',
   data: {"id":1},
@@ -179,7 +179,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/links',{
+axios.get('http://test.inis.cn/api/links',{
     params:{ "id":1 }
   }).then(res=>{
     // 状态码 200 表示请求成功
@@ -199,7 +199,7 @@ axios.get('http://api.inis.cc/api/links',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/links?id=1';
+$url  = 'http://test.inis.cn/api/links?id=1';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -238,7 +238,7 @@ echo $data;
 
 
 
-### 【SQL】接口
+## 【SQL】接口
 
 > 通过该接口，你可以自己编写SQL语法获取更多自定义的数据
 
@@ -277,7 +277,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/links/sql',
+  url:'http://test.inis.cn/api/links/sql',
   type:'GET',
   dataType:'JSON',
   data:{
@@ -303,7 +303,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/links/sql',{
+axios.get('http://test.inis.cn/api/links/sql',{
     params:{
       "order"  : "id acs",
       "whereOr": "sort,like,%全局友链%",    // 可以实现模糊搜索
@@ -326,7 +326,7 @@ axios.get('http://api.inis.cc/api/links/sql',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/links/sql?where=id=1;is_show=1;';
+$url  = 'http://test.inis.cn/api/links/sql?where=id=1;is_show=1;';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -373,7 +373,7 @@ echo $data;
 
 
 
-### 【新增或修改】友联
+## 【新增或修改】友联
 
 > 通过该接口，你可以新增或者修改友联数据   
 > 前提条件是必须登录且拥有权限的用户   
@@ -385,7 +385,7 @@ echo $data;
 
 | 参数名称 | 是否必选 | 参数类型 | 默认值 | 说明 | 备注 |
 | :---- | :---- | :---- | :---- | :---- | :---- |
-| login-token | 是 | string | 无 | 登录密钥 | 用于判断是否拥有权限 |
+| login-token | 是 | string | 无 | 登录密钥 | 用于判断是否拥有权限（可以在参数或headers中提交，推荐header提交） |
 | sort_id | 是 | string | null | 友链分组ID | 无 |
 | id | 否 | int | null | ID | 提交ID为修改，反则新增 |
 | named | 否 | string | null | 该字段等于name字段 | 由于TP6会抢占name参数，所以用named代替name |
@@ -418,7 +418,7 @@ $('#btn-save').on('click', () => {
     let data = {'login-token':token, sort_id, named, url, head_img, description, is_show};
 
     $.ajax({
-          url:'http://api.inis.cc/api/links',
+          url:'http://test.inis.cn/api/links',
           type:'POST',
           data:data,
           dataType:'JSON',
@@ -441,7 +441,7 @@ $('#btn-save').on('click', () => {
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.post('http://api.inis.cc/api/links',{},{
+axios.post('http://test.inis.cn/api/links',{},{
 	headers: {
 		'Content-Type':'application/x-www-form-urlencoded'
 	},
@@ -484,7 +484,7 @@ $data = [
 ];
 
 // 提交评论接口
-$url = 'http://api.inis.cc/api/links';
+$url = 'http://test.inis.cn/api/links';
 
 $ch = curl_init();
 
@@ -530,7 +530,7 @@ echo $output;
 
 
 
-### 【删除】友链
+## 【删除】友链
 
 > 通过该接口，你可以删除一条或者多条文章数据   
 > 前提条件是必须登录且拥有权限的用户   
@@ -542,7 +542,7 @@ echo $output;
 
 | 参数名称 | 是否必选 | 参数类型 | 默认值 | 可选参数 | 说明 | 备注 |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
-| login-token | 是 | string | 无 | 无 | 登录密钥 | 用于判断是否拥有权限 |
+| login-token | 是 | string | 无 | 无 | 登录密钥 | 用于判断是否拥有权限（可以在参数或headers中提交，推荐header提交） |
 | mode | 是 | string | null | remove | 模式 | 无 |
 | id | 否 | int、string | null | 无 | 友链ID | 支持批量，用 , 号隔开多个ID |
 
@@ -566,7 +566,7 @@ $('#btn-save').on('click', () => {
     let data = {'login-token':token, mode, id};
 
     $.ajax({
-          url:'http://api.inis.cc/api/links',
+          url:'http://test.inis.cn/api/links',
           type:'POST',
           data:data,
           dataType:'JSON',
@@ -589,7 +589,7 @@ $('#btn-save').on('click', () => {
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.post('http://api.inis.cc/api/links',{},{
+axios.post('http://test.inis.cn/api/links',{},{
 	headers: {
 		'Content-Type':'application/x-www-form-urlencoded'
 	},
@@ -624,7 +624,7 @@ $data = [
 ];
 
 // 提交接口
-$url = 'http://api.inis.cc/api/links';
+$url = 'http://test.inis.cn/api/links';
 
 $ch = curl_init();
 

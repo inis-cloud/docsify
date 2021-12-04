@@ -1,4 +1,4 @@
-### 统计【总】数据 <span class="text-primary ml-1">[ new ]</span>
+## 统计【总】数据 <span class="text-primary ml-1">[ new ]</span>
 
 > 通过该接口，你可以获取到聚合统计的数据
 > 改接口返回的是数据统计的总数量
@@ -9,7 +9,7 @@
 
 | 参数名称 | 是否必选 | 参数类型 | 默认值 | 可选参数 | 说明 |
 | :---- | :---- | :---- | :---- | :---- | :---- |
-| field | 否 | string | [全部] | links、article、users、page、comments、music、tag、linksSort、articleSort | 选择显示数据，用英文 , 号隔开多个数据 |
+| field | 否 | string | [全部] | links、article、users、page、comments、music、tag、linksSort、articleSort、other | 选择显示数据，用英文 , 号隔开多个数据 |
 | day | 否 | int | null | null | 需要显示X天内的数据 |
 | detail | 否 | bool | false | true、false | 是否显示详细数据 |
 | limit | 否 | int | 5 | null | 数据数量 |
@@ -27,7 +27,7 @@
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/group',
+  url:'http://test.inis.cn/api/group',
   type:'GET',
   dataType:'JSON',
   success: (res) => {
@@ -49,7 +49,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/group').then((res) => {
+axios.get('http://test.inis.cn/api/group').then((res) => {
   // 状态码 200 表示请求成功
   if(res.data.code == 200){
 	console.log(res.data)
@@ -67,7 +67,7 @@ axios.get('http://api.inis.cc/api/group').then((res) => {
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/group';
+$url  = 'http://test.inis.cn/api/group';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -124,7 +124,7 @@ echo $data;
 
 
 
-### 统计【详细】数据 <span class="text-primary ml-1">[ new ]</span>
+## 统计【详细】数据 <span class="text-primary ml-1">[ new ]</span>
 
 > 通过该接口，你可以获取到聚合统计的数据
 > 改接口返回的是数据统计的总数量
@@ -151,7 +151,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/group',
+  url:'http://test.inis.cn/api/group',
   type:'GET',
   dataType:'JSON',
   data: {"mode":"detail"},
@@ -174,7 +174,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/group',{
+axios.get('http://test.inis.cn/api/group',{
     params:{ "mode":"detail" }
   }).then((res) => {
   // 状态码 200 表示请求成功
@@ -194,7 +194,7 @@ axios.get('http://api.inis.cc/api/group',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/group?mode=detail';
+$url  = 'http://test.inis.cn/api/group?mode=detail';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 

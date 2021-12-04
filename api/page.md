@@ -1,4 +1,4 @@
-### 获取【全部】页面数据
+## 获取【全部】页面数据
 
 > 通过该接口，你可以获取到全部的页面数据
 
@@ -23,7 +23,7 @@
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/page',
+  url:'http://test.inis.cn/api/page',
   type:'GET',
   dataType:'JSON',
   success: (res) => {
@@ -45,7 +45,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/page').then((res) => {
+axios.get('http://test.inis.cn/api/page').then((res) => {
   // 状态码 200 表示请求成功
   if(res.data.code == 200){
 	console.log(res.data)
@@ -63,7 +63,7 @@ axios.get('http://api.inis.cc/api/page').then((res) => {
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/page';
+$url  = 'http://test.inis.cn/api/page';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -117,7 +117,7 @@ echo $data;
 
 
 
-### 获取【单个】页面数据
+## 获取【单个】页面数据
 
 > 通过该接口，你可以获取指定页面的详细数据
 
@@ -141,7 +141,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/page',
+  url:'http://test.inis.cn/api/page',
   type:'GET',
   dataType:'JSON',
   data: {"id":1},
@@ -164,7 +164,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/page',{
+axios.get('http://test.inis.cn/api/page',{
     params:{ "alias":"links" }
   }).then(res=>{
     // 状态码 200 表示请求成功
@@ -184,7 +184,7 @@ axios.get('http://api.inis.cc/api/page',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/page?id=1';
+$url  = 'http://test.inis.cn/api/page?id=1';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -223,7 +223,7 @@ echo $data;
 
 
 
-### 【SQL】接口
+## 【SQL】接口
 
 > 通过该接口，你可以自己编写SQL语法获取更多自定义的数据
 
@@ -262,7 +262,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/page/sql',
+  url:'http://test.inis.cn/api/page/sql',
   type:'GET',
   dataType:'JSON',
   data:{
@@ -288,7 +288,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/page/sql',{
+axios.get('http://test.inis.cn/api/page/sql',{
     params:{
       "order"  : "id acs",
       "whereOr": "title,like,%友链%",    // 可以实现模糊搜索
@@ -311,7 +311,7 @@ axios.get('http://api.inis.cc/api/page/sql',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/page/sql?where=id=1;is_show=1;';
+$url  = 'http://test.inis.cn/api/page/sql?where=id=1;is_show=1;';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 

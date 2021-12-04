@@ -1,4 +1,4 @@
-### 获取【全部】文章分类数据
+## 获取【全部】文章分类数据
 
 > 通过该接口，你可以获取到文章分类的全部数据
 
@@ -23,7 +23,7 @@
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/article-sort',
+  url:'http://test.inis.cn/api/article-sort',
   type:'GET',
   dataType:'JSON',
   success: (res) => {
@@ -45,7 +45,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/article-sort').then((res) => {
+axios.get('http://test.inis.cn/api/article-sort').then((res) => {
   // 状态码 200 表示请求成功
   if(res.data.code == 200){
 	console.log(res.data)
@@ -63,7 +63,7 @@ axios.get('http://api.inis.cc/api/article-sort').then((res) => {
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/article-sort';
+$url  = 'http://test.inis.cn/api/article-sort';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -138,7 +138,7 @@ echo $data;
 
 
 
-### 获取【分类下】的文章数据
+## 获取【分类下】的文章数据
 
 > 通过该接口，你可以获取到分类下的文章数据
 
@@ -164,7 +164,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/article-sort',
+  url:'http://test.inis.cn/api/article-sort',
   type:'GET',
   dataType:'JSON',
   data: {"id":1},
@@ -187,7 +187,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/article-sort',{
+axios.get('http://test.inis.cn/api/article-sort',{
     params:{ "id":1 }
   }).then((res) => {
     // 状态码 200 表示请求成功
@@ -207,7 +207,7 @@ axios.get('http://api.inis.cc/api/article-sort',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/article-sort?id=1';
+$url  = 'http://test.inis.cn/api/article-sort?id=1';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -289,7 +289,7 @@ echo $data;
 
 
 
-### 【SQL】接口
+## 【SQL】接口
 
 > 通过该接口，你可以自己编写SQL语法获取更多自定义的数据
 
@@ -328,7 +328,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/article-sort/sql',
+  url:'http://test.inis.cn/api/article-sort/sql',
   type:'GET',
   dataType:'JSON',
   data:{
@@ -354,7 +354,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/article-sort/sql',{
+axios.get('http://test.inis.cn/api/article-sort/sql',{
     params:{
       "order"  : "id acs",
       "whereOr": "name,like,%inis系统%",    // 可以实现模糊搜索
@@ -377,7 +377,7 @@ axios.get('http://api.inis.cc/api/article-sort/sql',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/article-sort/sql?where=id=1;is_show=1;';
+$url  = 'http://test.inis.cn/api/article-sort/sql?where=id=1;is_show=1;';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 

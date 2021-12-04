@@ -1,4 +1,4 @@
-### 通过【IP】获取地理位置
+## 通过【IP】获取地理位置
 
 > 通过该接口，你可以获取地理位置   
 > 支持IPV4和IPV6
@@ -22,7 +22,7 @@
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/location',
+  url:'http://test.inis.cn/api/location',
   type:'GET',
   dataType:'JSON',
   success: (res) => {
@@ -44,7 +44,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/location').then((res) => {
+axios.get('http://test.inis.cn/api/location').then((res) => {
   // 状态码 200 表示请求成功
   if(res.data.code == 200){
 	console.log(res.data)
@@ -62,7 +62,7 @@ axios.get('http://api.inis.cc/api/location').then((res) => {
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/location';
+$url  = 'http://test.inis.cn/api/location';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -102,7 +102,7 @@ echo $data;
 
 
 
-### 通过【经纬度】获取地理位置
+## 通过【经纬度】获取地理位置
 
 > 通过该接口，你可以获取地理位置   
 
@@ -125,7 +125,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/location/geocode',
+  url:'http://test.inis.cn/api/location/geocode',
   type:'GET',
   dataType:'JSON',
   data: {"location":"110.074668,23.382473"},
@@ -148,7 +148,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/location/geocode',{
+axios.get('http://test.inis.cn/api/location/geocode',{
     params:{ "location":"110.074668,23.382473" }
   }).then(res=>{
     // 状态码 200 表示请求成功
@@ -168,7 +168,7 @@ axios.get('http://api.inis.cc/api/location/geocode',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/location/geocode?location=110.074668,23.382473';
+$url  = 'http://test.inis.cn/api/location/geocode?location=110.074668,23.382473';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
@@ -242,7 +242,7 @@ echo $data;
 
 
 
-### 获取【天气】信息
+## 获取【天气】信息
 
 > 通过该接口，你可以获取指定友链的详细数据
 
@@ -266,7 +266,7 @@ echo $data;
 
 <script>
 $.ajax({
-  url:'http://api.inis.cc/api/location/weather',
+  url:'http://test.inis.cn/api/location/weather',
   type:'GET',
   dataType:'JSON',
   data: {"adcode":450881},
@@ -289,7 +289,7 @@ $.ajax({
 <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-axios.get('http://api.inis.cc/api/location/weather',{
+axios.get('http://test.inis.cn/api/location/weather',{
     params:{ "adcode":450881 }
   }).then(res=>{
     // 状态码 200 表示请求成功
@@ -309,7 +309,7 @@ axios.get('http://api.inis.cc/api/location/weather',{
 // 定义头部信息
 header('content-type:application/json');
 // API接口
-$url  = 'http://api.inis.cc/api/location/weather?adcode=450881';
+$url  = 'http://test.inis.cn/api/location/weather?adcode=450881';
 
 $curl = curl_init(); 
 curl_setopt($curl,CURLOPT_URL,$url); 
